@@ -1,4 +1,4 @@
-package NetworkEngine;
+package Base.NetworkEngine;
 
 import android.content.Context;
 
@@ -25,7 +25,6 @@ import Listener.UpdateGsonListener;
 
 public class VolleyGsonRequest<T> extends Request<T> {
 
-    public static final String TAG = VolleyGsonRequest.class.getSimpleName();
     private int httpMethodType;
     private final String requestBody;
     private Gson mGson;

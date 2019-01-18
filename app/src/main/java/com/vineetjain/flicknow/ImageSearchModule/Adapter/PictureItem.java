@@ -1,21 +1,13 @@
 package com.vineetjain.flicknow.ImageSearchModule.Adapter;
 
 import android.content.Context;
-
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.text.TextUtils;
-import android.text.style.TextAppearanceSpan;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -23,7 +15,6 @@ import com.vineetjain.flicknow.ImageSearchModule.Model.ImageListModel;
 import com.vineetjain.flicknow.R;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 import Utils.DateConvertUtils;
 

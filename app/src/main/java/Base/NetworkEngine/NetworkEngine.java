@@ -1,15 +1,10 @@
-package NetworkEngine;
+package Base.NetworkEngine;
 
 import android.content.Context;
-import android.text.TextUtils;
 
 import com.android.volley.Cache;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.vineetjain.flicknow.R;
 
-
-import java.io.UnsupportedEncodingException;
 
 import Listener.UpdateGsonListener;
 import Listener.onUpdateViewListener;

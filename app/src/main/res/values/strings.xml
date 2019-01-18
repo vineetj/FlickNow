@@ -3,4 +3,5 @@
     <string name="no_images">No photos found!</string>
     <string name="no_search_text">Please enter text to search.</string>
     <string name="no_internet">No Internet available</string>
+    <string name="general_error">Something went wrong, please try again later!.</string>
 </resources>

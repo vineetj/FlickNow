@@ -39,7 +39,6 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
     private ArrayList<ImageListModel.SingleIImagetemModel> imgListModel = new ArrayList<>();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +65,8 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
             }
         });
 
-        showProgressdialog("loading",true); // start loading feed as soon as app is launched
+        // start loading feed as soon as app is launched (landscape mode is currently disabled)
+        showProgressdialog("loading",true);
         hideSoftKeyboard();
         photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
 
@@ -85,6 +85,7 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
                         if(!TextUtils.isEmpty(activityFlickImageListBinding.searchSrcText.getText())) {
                             showProgressdialog("loading", true);
                             hideSoftKeyboard();
+
                             photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
                         }
                         else
@@ -111,7 +112,7 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
                 case APIConstants.REQUESTTYPEGETPHOTO: {
                     if (genericRespModel.apiResponse instanceof ImageListModel) {
                         if (((ImageListModel) genericRespModel.apiResponse).getCode() != 0) {
-                            // error condition from flickr
+                            // error response received from flickr
                             Toast.makeText(FlickImageListActivity.this, ((ImageListModel) genericRespModel.apiResponse).getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
                             if (((ImageListModel) genericRespModel.apiResponse).getItems().size() > 0)
@@ -129,6 +130,7 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
         }
         else if (genericRespModel.apiResponse instanceof String)
         {
+            // in case error string is received, like 'no internet connection'
             Toast.makeText(FlickImageListActivity.this, (String) genericRespModel.apiResponse, Toast.LENGTH_SHORT).show();
         }
 

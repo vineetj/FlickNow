@@ -1,21 +1,15 @@
 package com.vineetjain.flicknow.ImageSearchModule.ViewModel;
 
-import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.content.Context;
-import android.support.annotation.NonNull;
-
 import com.android.volley.Request;
 import com.vineetjain.flicknow.ImageSearchModule.Model.ImageListModel;
-
 import Listener.onUpdateViewListener;
-import NetworkEngine.NetworkEngine;
+import Base.NetworkEngine.NetworkEngine;
 import Utils.APIConstants;
 
 public class PhotoListVM extends ViewModel implements onUpdateViewListener {
-
 
 
     private final MutableLiveData<APIResponseWrapper> responseLiveData = new MutableLiveData<>();
@@ -39,7 +33,7 @@ public class PhotoListVM extends ViewModel implements onUpdateViewListener {
     @Override
     public void returnResponse(Object responseObject, boolean isSuccess, int reqType) {
 
-            APIResponseWrapper respwrapper = new APIResponseWrapper(responseObject,reqType,isSuccess);
-            responseLiveData.setValue(respwrapper);
+            APIResponseWrapper respWrapper = new APIResponseWrapper(responseObject,reqType,isSuccess);
+            responseLiveData.setValue(respWrapper);
          }
     }

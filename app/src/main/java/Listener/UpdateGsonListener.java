@@ -12,7 +12,7 @@ import com.google.gson.JsonSyntaxException;
 
 import java.io.UnsupportedEncodingException;
 
-import NetworkEngine.VolleyExceptionUtil;
+import Base.NetworkEngine.VolleyExceptionUtil;
 
 
 public abstract class UpdateGsonListener<T> implements Listener<T>, ErrorListener {

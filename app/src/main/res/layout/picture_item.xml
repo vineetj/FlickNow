@@ -17,31 +17,38 @@
             android:adjustViewBounds="true"
             android:src="@drawable/sample"/>
 
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="fjkfjkggkgkg"
-            android:textSize="@dimen/dp_15"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_15"
             android:paddingTop="@dimen/dp_8"
             />
+
+
+
+
     <TextView
         android:id="@+id/dateTaken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fjkfjkggkgkg"
 
-        android:textSize="@dimen/dp_15"
-        android:paddingTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_12"
+        android:paddingTop="@dimen/dp_6"
         />
+
 
     <TextView
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fjkfjkggkgkg"
-        android:textSize="@dimen/dp_15"
-        android:paddingTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_12"
+        android:paddingTop="@dimen/dp_4"
         />
 
     <TextView
@@ -49,8 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fjkfjkggkgkg"
-        android:textSize="@dimen/dp_15"
-        android:paddingTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_12"
+        android:paddingTop="@dimen/dp_4"
         />
 
 </LinearLayout>
