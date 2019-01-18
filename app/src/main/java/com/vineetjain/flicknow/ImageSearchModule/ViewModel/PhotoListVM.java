@@ -15,7 +15,6 @@ public class PhotoListVM extends ViewModel implements onUpdateViewListener {
 
     private final MutableLiveData<Object> responseLiveData = new MutableLiveData<>();
 
-
     public MutableLiveData<Object> photoReceivedResponse() {
         return responseLiveData;
     }
