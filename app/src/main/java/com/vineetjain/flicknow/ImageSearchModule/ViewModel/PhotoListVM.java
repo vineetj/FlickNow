@@ -1,8 +1,11 @@
 package com.vineetjain.flicknow.ImageSearchModule.ViewModel;
 
+import android.app.Application;
+import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.android.volley.Request;
 import com.vineetjain.flicknow.ImageSearchModule.Model.ImageListModel;
@@ -13,14 +16,17 @@ import Utils.APIConstants;
 
 public class PhotoListVM extends ViewModel implements onUpdateViewListener {
 
-    private final MutableLiveData<Object> responseLiveData = new MutableLiveData<>();
 
-    public MutableLiveData<Object> photoReceivedResponse() {
+
+    private final MutableLiveData<APIResponseWrapper> responseLiveData = new MutableLiveData<>();
+
+    public MutableLiveData<APIResponseWrapper> photoReceivedResponse() {
         return responseLiveData;
     }
 
 
-    public void getDatafromAPI(String searchString, Context context)
+    // called from FlickImageListActivity to fetch pictures
+    public void getFlickrFeed(String searchString, Context context) // ApplicationContext passed, not Activity context as that may result in memory leak
     {
         StringBuilder urlbuilder = new StringBuilder();
         urlbuilder.append(APIConstants.FLICKBASEURL);
@@ -32,6 +38,8 @@ public class PhotoListVM extends ViewModel implements onUpdateViewListener {
 
     @Override
     public void returnResponse(Object responseObject, boolean isSuccess, int reqType) {
-            responseLiveData.setValue(responseObject);
+
+            APIResponseWrapper respwrapper = new APIResponseWrapper(responseObject,reqType,isSuccess);
+            responseLiveData.setValue(respwrapper);
          }
     }

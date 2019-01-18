@@ -31,7 +31,6 @@ public class PictureItem extends RecyclerView.Adapter<PictureItem.MyViewHolder> 
 
     private ArrayList<ImageListModel.SingleIImagetemModel> itemsList;
     private Context mContext;
-    private String queryString;
 
     public PictureItem(Context context, ArrayList<ImageListModel.SingleIImagetemModel> itemsList) {
         this.itemsList = itemsList;
@@ -69,10 +68,13 @@ public class PictureItem extends RecyclerView.Adapter<PictureItem.MyViewHolder> 
 
         ImageListModel.SingleIImagetemModel singleItem = itemsList.get(i);
 
-        holder.phot_date.setText(DateConvertUtils.formatDate("yyyy-MM-dd'T'HH:mm:ss-hh:mm","MMM dd yyyy",singleItem.getDate_taken()));
-        holder.phot_author.setText(singleItem.getAuthor());
-        holder.phot_title.setText(singleItem.getTitle());
-        holder.phot_description.setText(Html.fromHtml(singleItem.getDescription()));
+        holder.phot_date.setText(TextUtils.isEmpty(singleItem.getDate_taken())?"":DateConvertUtils.formatDate("yyyy-MM-dd'T'HH:mm:ss-hh:mm","MMM dd yyyy",singleItem.getDate_taken()));
+        holder.phot_author.setText(TextUtils.isEmpty(singleItem.getAuthor())?"":singleItem.getAuthor());
+        holder.phot_title.setText(TextUtils.isEmpty(singleItem.getTitle())?"":singleItem.getTitle());
+
+        // html content parsing is working but content is not proper
+        //holder.phot_description.setText(Html.fromHtml(singleItem.getDescription()));
+        holder.phot_description.setVisibility(View.GONE);
 
         if (!TextUtils.isEmpty(singleItem.getMedia().getM())) {
             Picasso.with(mContext).load(singleItem.getMedia().getM()).placeholder(R.drawable.no_image).into(holder.phot_flick);

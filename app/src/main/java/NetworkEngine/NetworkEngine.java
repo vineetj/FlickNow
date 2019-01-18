@@ -18,7 +18,6 @@ import Utils.NetworkAvailability;
 
 public class NetworkEngine {
 
-    private static final String TAG = NetworkEngine.class.getSimpleName();
     public static final int NOT_SET = -1;
     private static NetworkEngine instance;
     private static Context mContext;
@@ -61,13 +60,6 @@ public class NetworkEngine {
         return instance;
     }
 
-
-
-    public NetworkEngine setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-        return instance;
-    }
-
     public NetworkEngine setRequestType(int requestType) {
         this.requestType = requestType;
         return instance;
@@ -77,10 +69,6 @@ public class NetworkEngine {
         this.httpMethodType = httpMethodType;
         return instance;
     }
-
-
-
-
 
     public void build() {
 
@@ -95,6 +83,7 @@ public class NetworkEngine {
 
             };
 
+        // return to View Model in case internet is not available, common check for each API called within project
         if(!NetworkAvailability.isNetworkAvailable(mContext))
         {
             listener.returnResponse(mContext.getResources().getString(R.string.no_internet),false,requestType);
@@ -115,18 +104,4 @@ public class NetworkEngine {
             VolleyManager.getInstance(mContext.getApplicationContext()).addToRequestQueue(volleyGsonRequest, serviceType + "_" + requestType);
         }
     }
-
-
-
-
-    public interface OnJsonResponse {
-        void onRawJsonReceived(String jsonResponse);
-    }
-
-
-
-    public interface OnCachedResponse {
-        void onCachedResponseRecieved(boolean isCacheAvailable, Object responseObject, int requestType);
-    }
-
 }

@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.vineetjain.flicknow.ImageSearchModule.Adapter.PictureItem;
 import com.vineetjain.flicknow.ImageSearchModule.Model.ImageListModel;
+import com.vineetjain.flicknow.ImageSearchModule.ViewModel.APIResponseWrapper;
 import com.vineetjain.flicknow.ImageSearchModule.ViewModel.PhotoListVM;
 import com.vineetjain.flicknow.R;
 import com.vineetjain.flicknow.databinding.ActivityFlickImageListBinding;
@@ -28,6 +29,7 @@ import com.vineetjain.flicknow.databinding.ActivityFlickImageListBinding;
 import java.util.ArrayList;
 
 import Base.BaseActivity;
+import Utils.APIConstants;
 
 public class FlickImageListActivity extends BaseActivity implements LifecycleObserver {
 
@@ -35,6 +37,8 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
     private PictureItem pictureItemAdapter;
     ActivityFlickImageListBinding activityFlickImageListBinding;
     private ArrayList<ImageListModel.SingleIImagetemModel> imgListModel = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,16 +59,16 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
 
         photoListVM = ViewModelProviders.of(this).get(PhotoListVM.class);
 
-        photoListVM.photoReceivedResponse().observe(this, new Observer<Object>() {
+        photoListVM.photoReceivedResponse().observe(this, new Observer<APIResponseWrapper>() {
             @Override
-            public void onChanged(@Nullable Object genericRespModel) {
+            public void onChanged(@Nullable APIResponseWrapper genericRespModel) {
                 HandleOnChanged(genericRespModel);
             }
         });
 
         showProgressdialog("loading",true); // start loading feed as soon as app is launched
         hideSoftKeyboard();
-        photoListVM.getDatafromAPI(activityFlickImageListBinding.searchSrcText.getText().toString(), FlickImageListActivity.this);
+        photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
 
         // detect touch on search icon placed with search Edit text & send query
         activityFlickImageListBinding.searchSrcText.setOnTouchListener(new View.OnTouchListener() {
@@ -81,7 +85,7 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
                         if(!TextUtils.isEmpty(activityFlickImageListBinding.searchSrcText.getText())) {
                             showProgressdialog("loading", true);
                             hideSoftKeyboard();
-                            photoListVM.getDatafromAPI(activityFlickImageListBinding.searchSrcText.getText().toString(), FlickImageListActivity.this);
+                            photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
                         }
                         else
                             Toast.makeText(FlickImageListActivity.this,getResources().getString(R.string.no_search_text),Toast.LENGTH_SHORT).show();
@@ -95,31 +99,53 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
 
     }
 
-    public void HandleOnChanged(Object genericRespModel)
+    public void HandleOnChanged(APIResponseWrapper genericRespModel)
     {
         activityFlickImageListBinding.noOperators.setVisibility(View.GONE);
         pictureItemAdapter.setListData(imgListModel); // if response resulted in zero items & then current list should become empty
         hideProgressDialog();
         hideSoftKeyboard();
-        if(genericRespModel instanceof ImageListModel) {
-            if(((ImageListModel)genericRespModel).getCode()!=0)
-            {
-                // error condition from flickr
-                Toast.makeText(FlickImageListActivity.this,((ImageListModel)genericRespModel).getMessage(),Toast.LENGTH_SHORT).show();
-            }
-            else {
-                if (((ImageListModel) genericRespModel).getItems().size() > 0)
-                    pictureItemAdapter.setListData(((ImageListModel) genericRespModel).getItems());
-                else {
-                    activityFlickImageListBinding.noOperators.setVisibility(View.VISIBLE);
-                    activityFlickImageListBinding.searchSrcText.setText("");
+        if(genericRespModel.apiResult) {
+
+            switch (genericRespModel.requestType) {
+                case APIConstants.REQUESTTYPEGETPHOTO: {
+                    if (genericRespModel.apiResponse instanceof ImageListModel) {
+                        if (((ImageListModel) genericRespModel.apiResponse).getCode() != 0) {
+                            // error condition from flickr
+                            Toast.makeText(FlickImageListActivity.this, ((ImageListModel) genericRespModel.apiResponse).getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            if (((ImageListModel) genericRespModel.apiResponse).getItems().size() > 0)
+                                pictureItemAdapter.setListData(((ImageListModel) genericRespModel.apiResponse).getItems());
+                            else {
+                                activityFlickImageListBinding.noOperators.setVisibility(View.VISIBLE);
+                                activityFlickImageListBinding.searchSrcText.setText("");
+                            }
+                        }
+                    }
                 }
+                break;
+                default:break;
             }
         }
-        else if (genericRespModel instanceof String)
+        else if (genericRespModel.apiResponse instanceof String)
         {
-            Toast.makeText(FlickImageListActivity.this,(String)genericRespModel,Toast.LENGTH_SHORT).show();
+            Toast.makeText(FlickImageListActivity.this, (String) genericRespModel.apiResponse, Toast.LENGTH_SHORT).show();
         }
+
+        else
+        {
+            Toast.makeText(FlickImageListActivity.this, getResources().getString(R.string.general_error), Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+     super.onDestroy();
     }
 
 }
