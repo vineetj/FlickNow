@@ -1,0 +1,156 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.databinding:adapters:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/adapters-3.1.1.aar/c0ca813a22dd374a90d01787166b8be8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/library-3.1.1.aar/a39d9aa95aaa5f6c98a4b3b3c972558c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0890fa7bcd8baebf1a23627b70e9f343/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/bb16d66b9ab8046a93f658b8c5064f74/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/22c781151b3aea8535aec83580e2f0cf/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/3a404beaf3d6838cb08f80b903134933/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5065cda8e76c6cc0f485b9385ecfe601/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/39667ed4f3998f824a90aaeb8799c94d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e4b2095d504296f2a252bed48cf00655/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c223b3e833f7b3deddfab244bc97d024/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6a2972d1157e3deffdfc5faf78baaaae/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f048b760e484ca1110819848a8b6c019/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/09982898bc79e12bf144ac975401db78/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0f7d5e822f3c500390d2c7d0b3a4ee11/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8a5de6f242961db38048b586dfd3d9bb/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/99ed0fead58aada07baeb6ff677a74bc/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/b56850e52fcf24a19cda11b294484ad9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/21e2da1b774f93c0c3f02b3df84fad60/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/58b278f0f4cb04af4b6d22f15e116cdf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/83bdf4b723ede68aa3b23ef737f8f184/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:7:22-73
+application
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:10:5-25:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/22c781151b3aea8535aec83580e2f0cf/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/22c781151b3aea8535aec83580e2f0cf/AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:22:5-28:19
+	android:supportsRtl
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:16:9-40
+activity#com.vineetjain.flicknow.ImageSearchModule.Activity.FlickImageListActivity
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:17:9-24:20
+	android:windowSoftInputMode
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:18:13-52
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:17:19-84
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/adapters-3.1.1.aar/c0ca813a22dd374a90d01787166b8be8/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/adapters-3.1.1.aar/c0ca813a22dd374a90d01787166b8be8/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/library-3.1.1.aar/a39d9aa95aaa5f6c98a4b3b3c972558c/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/library-3.1.1.aar/a39d9aa95aaa5f6c98a4b3b3c972558c/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0890fa7bcd8baebf1a23627b70e9f343/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0890fa7bcd8baebf1a23627b70e9f343/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/bb16d66b9ab8046a93f658b8c5064f74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/bb16d66b9ab8046a93f658b8c5064f74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/22c781151b3aea8535aec83580e2f0cf/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/22c781151b3aea8535aec83580e2f0cf/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/3a404beaf3d6838cb08f80b903134933/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/3a404beaf3d6838cb08f80b903134933/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5065cda8e76c6cc0f485b9385ecfe601/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5065cda8e76c6cc0f485b9385ecfe601/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/39667ed4f3998f824a90aaeb8799c94d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/39667ed4f3998f824a90aaeb8799c94d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e4b2095d504296f2a252bed48cf00655/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e4b2095d504296f2a252bed48cf00655/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c223b3e833f7b3deddfab244bc97d024/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c223b3e833f7b3deddfab244bc97d024/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6a2972d1157e3deffdfc5faf78baaaae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6a2972d1157e3deffdfc5faf78baaaae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f048b760e484ca1110819848a8b6c019/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f048b760e484ca1110819848a8b6c019/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/09982898bc79e12bf144ac975401db78/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/09982898bc79e12bf144ac975401db78/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0f7d5e822f3c500390d2c7d0b3a4ee11/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0f7d5e822f3c500390d2c7d0b3a4ee11/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8a5de6f242961db38048b586dfd3d9bb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8a5de6f242961db38048b586dfd3d9bb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/99ed0fead58aada07baeb6ff677a74bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/99ed0fead58aada07baeb6ff677a74bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/b56850e52fcf24a19cda11b294484ad9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/b56850e52fcf24a19cda11b294484ad9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/21e2da1b774f93c0c3f02b3df84fad60/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/21e2da1b774f93c0c3f02b3df84fad60/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/58b278f0f4cb04af4b6d22f15e116cdf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/58b278f0f4cb04af4b6d22f15e116cdf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/83bdf4b723ede68aa3b23ef737f8f184/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/83bdf4b723ede68aa3b23ef737f8f184/AndroidManifest.xml:20:5-44
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vineetjain/Documents/FlickNow/app/src/main/AndroidManifest.xml
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/vineetjain/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd0b55e76ce87335d305d815b6ae111b/AndroidManifest.xml:24:13-83

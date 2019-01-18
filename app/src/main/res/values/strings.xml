@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FlickNow</string>
+    <string name="no_images">No photos found!</string>
+    <string name="no_search_text">Please enter text to search.</string>
+    <string name="no_internet">No Internet available</string>
+</resources>
