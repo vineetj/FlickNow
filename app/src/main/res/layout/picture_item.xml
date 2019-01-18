@@ -7,12 +7,14 @@
     android:layout_margin="@dimen/dp_10">
 
 
-        <ImageView
+        <Utils.ImageResizeUtil
+
             android:id="@+id/phot_flick"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_170"
-            android:scaleType="fitXY"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
             android:src="@drawable/sample"/>
 
         <TextView
