@@ -14,8 +14,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +42,9 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
     private PictureItem pictureItemAdapter;
     ActivityFlickImageListBinding activityFlickImageListBinding;
     private ArrayList<ImageListModel.SingleIImagetemModel> imgListModel = new ArrayList<>();
+    private ImageView searchButton;
+    private TextView textViewHead;
+    private AutoCompleteTextView giftCardAutoComplete;
 
 
     @Override
@@ -45,9 +53,29 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
         setContentView(R.layout.activity_flick_image_list);
 
         activityFlickImageListBinding = DataBindingUtil.setContentView(this, R.layout.activity_flick_image_list);
-        activityFlickImageListBinding.setViewModel(new PhotoListVM());
+       // activityFlickImageListBinding.setViewModel(new PhotoListVM());
         activityFlickImageListBinding.executePendingBindings();
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        searchButton = (ImageView) findViewById(R.id.searchIcon);
+        textViewHead = (TextView)findViewById(R.id.txvHeader);
+        giftCardAutoComplete = (AutoCompleteTextView) findViewById(R.id.giftCardAutoComplete);
+        giftCardAutoComplete.setImeOptions(EditorInfo.IME_ACTION_SEARCH);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                giftCardAutoComplete.setVisibility(View.VISIBLE);
+                textViewHead.setVisibility(View.GONE);
+            }
+        });
+        //RelativeLayout rltLayout = (RelativeLayout)findViewById(R.id.rltRecycler);
+        //RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams)rltLayout.getLayoutParams();
+
+        //relativeParams.setMargins(toolbar.getHeight(),toolbar.getHeight(),toolbar.getHeight(),toolbar.getHeight());
+        //rltLayout.setLayoutParams(relativeParams);
            RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
             pictureItemAdapter = new PictureItem(this, imgListModel);
@@ -68,10 +96,29 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
         // start loading feed as soon as app is launched (landscape mode is currently disabled)
         showProgressdialog("loading",true);
         hideSoftKeyboard();
-        photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
+        photoListVM.getFlickrFeed(giftCardAutoComplete.getText().toString(), getApplicationContext());
+
+        giftCardAutoComplete.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (giftCardAutoComplete.getText().toString().length() > 0) {
+                    if (actionId == event.ACTION_DOWN) {
+                            showProgressdialog("loading", true);
+                            hideSoftKeyboard();
+                            photoListVM.getFlickrFeed(giftCardAutoComplete.getText().toString(), getApplicationContext());
+                        giftCardAutoComplete.setVisibility(v.GONE);
+                        giftCardAutoComplete.setText("");
+                        textViewHead.setVisibility(View.VISIBLE);
+                        searchButton.setVisibility(v.VISIBLE);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         // detect touch on search icon placed with search Edit text & send query
-        activityFlickImageListBinding.searchSrcText.setOnTouchListener(new View.OnTouchListener() {
+        giftCardAutoComplete.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 final int DRAWABLE_LEFT = 0;
@@ -80,17 +127,20 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
                 final int DRAWABLE_BOTTOM = 3;
 
                 if(event.getAction() == MotionEvent.ACTION_UP) {
-                    if(event.getRawX() >= (activityFlickImageListBinding.searchSrcText.getRight() - activityFlickImageListBinding.searchSrcText.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                    if(event.getRawX() >= (giftCardAutoComplete.getRight() - giftCardAutoComplete.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
 
-                        if(!TextUtils.isEmpty(activityFlickImageListBinding.searchSrcText.getText())) {
+                        giftCardAutoComplete.setVisibility(View.GONE);
+                        textViewHead.setVisibility(View.VISIBLE);
+
+                       /* if(!TextUtils.isEmpty(giftCardAutoComplete.getText())) {
                             showProgressdialog("loading", true);
                             hideSoftKeyboard();
 
-                            photoListVM.getFlickrFeed(activityFlickImageListBinding.searchSrcText.getText().toString(), getApplicationContext());
+                            photoListVM.getFlickrFeed(giftCardAutoComplete.getText().toString(), getApplicationContext());
                         }
                         else
                             Toast.makeText(FlickImageListActivity.this,getResources().getString(R.string.no_search_text),Toast.LENGTH_SHORT).show();
-
+*/
                         return true;
                     }
                 }
@@ -119,7 +169,7 @@ public class FlickImageListActivity extends BaseActivity implements LifecycleObs
                                 pictureItemAdapter.setListData(((ImageListModel) genericRespModel.apiResponse).getItems());
                             else {
                                 activityFlickImageListBinding.noOperators.setVisibility(View.VISIBLE);
-                                activityFlickImageListBinding.searchSrcText.setText("");
+                                //activityFlickImageListBinding.searchSrcText.setText("");
                             }
                         }
                     }

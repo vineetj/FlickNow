@@ -1,9 +1,19 @@
 package com.vineetjain.flicknow.ImageSearchModule.Model;
 
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+import android.databinding.BindingAdapter;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.vineetjain.flicknow.BR;
+import com.vineetjain.flicknow.R;
+
 import java.util.ArrayList;
 
-public class ImageListModel
+public class ImageListModel extends BaseObservable
 {
     private String title;
 
@@ -35,6 +45,7 @@ public class ImageListModel
         this.title = title;
     }
 
+    @Bindable
     public ArrayList<SingleIImagetemModel> getItems ()
     {
         return items;
@@ -42,7 +53,9 @@ public class ImageListModel
 
     public void setItems (ArrayList<SingleIImagetemModel>items)
     {
+
         this.items = items;
+        notifyPropertyChanged(BR.items);
     }
 
     public String getDescription ()
@@ -125,8 +138,17 @@ public class ImageListModel
                 ", message='" + message + '\'' +
                 '}';
     }
+    @BindingAdapter({"m"})
+    public static void loadImage(ImageView view, String imageUrl) {
+        Glide.with(view.getContext())
+                .load(imageUrl)
+                .apply(RequestOptions.centerCropTransform().placeholder(R.drawable.no_image))
+                .into(view);
 
-    public class SingleIImagetemModel {
+        // If you consider Picasso, follow the below
+        // Picasso.with(view.getContext()).load(imageUrl).placeholder(R.drawable.placeholder).into(view);
+    }
+    public class SingleIImagetemModel extends BaseObservable {
 
 
         private String tags;
@@ -157,16 +179,21 @@ public class ImageListModel
             this.tags = tags;
         }
 
+        @Bindable
         public String getAuthor ()
         {
             return author;
         }
 
         public void setAuthor (String author)
+
         {
             this.author = author;
+            notifyPropertyChanged(BR.author);
         }
 
+
+        @Bindable
         public String getTitle ()
         {
             return title;
@@ -174,9 +201,12 @@ public class ImageListModel
 
         public void setTitle (String title)
         {
+
             this.title = title;
+            notifyPropertyChanged(BR.title);
         }
 
+        @Bindable
         public String getDescription ()
         {
             return description;
@@ -184,17 +214,22 @@ public class ImageListModel
 
         public void setDescription (String description)
         {
+
             this.description = description;
+            notifyPropertyChanged(BR.description);
         }
 
+        @Bindable
         public String getDate_taken ()
         {
             return date_taken;
         }
 
+
         public void setDate_taken (String date_taken)
         {
             this.date_taken = date_taken;
+            notifyPropertyChanged(BR.date_taken);
         }
 
         public String getLink ()
@@ -239,10 +274,11 @@ public class ImageListModel
 
 
 
-        public class Media
+        public class Media extends BaseObservable
         {
             private String m;
 
+            @Bindable
             public String getM ()
             {
                 return m;
@@ -250,7 +286,9 @@ public class ImageListModel
 
             public void setM (String m)
             {
+
                 this.m = m;
+                notifyPropertyChanged(BR.m);
             }
 
 
